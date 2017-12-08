@@ -14,7 +14,7 @@ Supports listing, retrieving and savings metrics from the IBM Cloud Monitoring s
 
 ```javascript
 const Monitoring = require('ibm-cloud-monitoring')
-const client = new Monitoring({ scope: 's-XXX, api_key: 'API_KEY' })
+const client = new Monitoring({ scope: 's-XXX', api_key: 'API_KEY' })
 
 // retrieve Node.js memory usage stats => { rss, heapTotal, heapUsed, external }                               
 const memUsage = process.memoryUsage()
@@ -93,7 +93,7 @@ const Monitoring = require('ibm-cloud-monitoring')
 
 const client = new Monitoring({
   host: 'metrics.ng.bluemix.net'
-  scope: 's-<SPACE_GUID>,
+  scope: 's-<SPACE_GUID>',
   // plus one of the following auth parameters...
   api_key: 'API_KEY' // OR...
   iam_token: 'IAM_TOKEN' // OR...
