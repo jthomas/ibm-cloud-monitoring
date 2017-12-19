@@ -1,7 +1,5 @@
 # IBM Cloud Monitoring JavaScript SDK
 
-BADGES?
-
 JavaScript library for the [IBM Cloud Monitoring service](https://console.bluemix.net/docs/services/cloud-monitoring/monitoring_ov.html#monitoring_ov).
 
 >  Use the IBM® Cloud Monitoring service to expand your collection and retention capabilities when working with metrics, and to be able to define rules and alerts that notify you of conditions that require attention. 
@@ -32,15 +30,11 @@ await client.save(metrics)
 
 This example saves the current memory usage statistics for a Node.js application to the IBM Cloud Monitoring Service.
 
-
-
 ## installation
 
 ```
 npm install ibm-cloud-monitoring
 ```
-
-
 
 ## configuration
 
@@ -59,7 +53,7 @@ The following [regional endpoints](https://console.bluemix.net/docs/services/clo
 
 `scope` must be the GUID for the space being monitored. 
 
-Using the Bluemix CLI, the GUID for a space can be retrieved. 
+Using the [Bluemix CLI](https://console.bluemix.net/docs/cli/index.html), the GUID for a space can be retrieved. 
 
 ```
 $ bx iam space SpaceName --guid
@@ -167,8 +161,6 @@ Multiple metric values can be saved by passing in an array of metric values.
 ***returns***
 
 Promise with no content to indicate when save operation has finished.
-
-
 
 ## bugs / feedback / issues?
 
