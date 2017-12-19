@@ -6,6 +6,16 @@
   "scripts": {
     "test": "ava"
   },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthomas/ibm-cloud-monitoring.git"
+  },
+  "keywords": [
+    "ibm cloud", "monitoring", "metrics"
+  ],
   "author": "James Thomas <james@jamesthom.as>",
   "license": "MIT",
   "devDependencies": {
