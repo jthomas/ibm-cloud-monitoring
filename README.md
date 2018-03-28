@@ -12,7 +12,11 @@ Supports listing, retrieving and savings metrics from the IBM Cloud Monitoring s
 
 ```javascript
 const Monitoring = require('ibm-cloud-monitoring')
-const client = new Monitoring({ scope: 's-XXX', api_key: 'API_KEY' })
+const client = new Monitoring({
+  scope: 's-XXX',
+  api_key: 'API_KEY',
+  host: 'metrics.ng.bluemix.net'
+})
 
 // retrieve Node.js memory usage stats => { rss, heapTotal, heapUsed, external }                               
 const memUsage = process.memoryUsage()
@@ -22,7 +26,7 @@ const metricName = metric => `app.metric.${metric}`
 
 // convert to memory usage stats to {key: '...', value: '...'}
 const metrics = Object.entries(memUsage).map(
-  entry => ({key: metricName(entry[0]), value: entry[1]})
+  entry => ({name: metricName(entry[0]), value: entry[1]})
 )
 
 await client.save(metrics)
